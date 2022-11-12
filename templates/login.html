@@ -3,34 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <style>
+        .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <form action="" method="post">
-  <p>
-      <label for="username">Username</label>
-      <input type="text" name="username">
-  </p>
-    {% if error1 %}
+        <p>
+     <label for="username">Username</label>
+     <input type="text" name="username">
+ </p>
+        {% if error1 %}
       <p>{{error1}}! </p>
       {% endif %}
-
-  <p>
-      <label for="password">Password</label>
-      <input type="password" name="password">
-  </p>
-    {% if error2 %}
+ <p>
+     <label for="password">Password</label>
+     <input type="password" name="password">
+ </p>
+        {% if error2 %}
       <p>{{error2}}! </p>
       {% endif %}
     {% if error3 %}
       <p>{{error3}}! </p>
       {% endif %}
-  <p>
-      <input type="submit">
-  </p>
-    {% if errorUser %}
+ <p>
+     <input type="submit" value="login" name="login" class="button">
+  <input type="submit" value="registration" name="registration" class="button">
+ </p>
+ {% if errorUser %}
       <p>{{errorUser}}! </p>
       {% endif %}
-    </form>
-
+ </form>
 </body>
+
 </html>
